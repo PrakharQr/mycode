@@ -1,0 +1,69 @@
+﻿
+@model QuarTest.Models.MasterProduct_info
+@{
+    ViewBag.Title = "ProductMaster";
+}
+<h2 class="text-center">Add Multiple Product</h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/AppJs/BulkInsertion.css" />
+<script src="~/AppJs/BulkInsertion.js"></script>
+<div class="container">  
+    <div class="row">
+        <div class="col-md-4">
+            <label>Brand</label>
+            <select id="DdlBrand" class="form-control">
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label>Product Name</label>
+            <input type="text" class="form-control" placeholder="Enter Name" id="TxtPrdName" />
+        </div>
+        <div class="col-md-4">
+            <label>Product Color</label>
+            <input type="color" class="form-control" placeholder="Enter Name" id="TxtPrdColor" />
+        </div>
+        <div class="col-md-12 text-center" style="margin-top:20px">
+            <input type="button" value="Add" class="btn btn-success" id="btnAdd" onclick="FormValidation()" />
+        </div>
+    </div>
+    <hr />
+    <div class="col-md-12">
+        <h4>Added Items</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered" id="TblPrdMaster">
+                <colgroup>
+                    <col width="2%">
+                    <col width="10%">
+                    <col width="40%">
+                    <col width="30%">
+                    <col width="20%">
+                </colgroup>
+                <tr>
+                    <th>S.No</th>
+                    <th>Brand</th>
+                    <th>Product</th>
+                    <th>Product Color</th>
+                    <th>#</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <input type="button" value="Submit All" class="btn btn-success" id="btnSave" style="display:none" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="divprdlist"></div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
